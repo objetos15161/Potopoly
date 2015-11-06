@@ -14,6 +14,6 @@ public class J1 extends Jugador
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+
+    }  
 }
