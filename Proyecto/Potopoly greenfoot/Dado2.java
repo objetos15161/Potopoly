@@ -1,15 +1,15 @@
 import greenfoot.*;
 
 /**
- * Write a description of class J1 here.
+ * Write a description of class Dado2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class J1 extends Jugador
+public class Dado2 extends Dado
 {
     /**
-     * Act - do whatever the J1 wants to do. This method is called whenever
+     * Act - do whatever the Dado2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
