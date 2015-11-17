@@ -23,25 +23,25 @@ public class Jugador extends Actor
         GreenfootImage sprite;
         if(imagen == 1)
         {
-            sprite = new GreenfootImage("Sprite1.png");
+            sprite = new GreenfootImage("sprite1.png");
             saltoX = -13;
             saltoY = -13;
         }
         else if(imagen == 2)
         {
-            sprite = new GreenfootImage("Sprite2.png");
+            sprite = new GreenfootImage("sprite2.png");
             saltoX = 13;
             saltoY = -13;
         }
         else if(imagen == 3)
         {
-            sprite = new GreenfootImage("Sprite3.png");
+            sprite = new GreenfootImage("sprite3.png");
             saltoX = -13;
             saltoY = 13;
         }
         else
         {
-            sprite = new GreenfootImage("Sprite4.png");
+            sprite = new GreenfootImage("sprite4.png");
             saltoX = 13;
             saltoY = 13;
         }
