@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=anchura\ altura\ texto
+comment0.target=Boton(int,\ int,\ java.lang.String)
+numComments=1

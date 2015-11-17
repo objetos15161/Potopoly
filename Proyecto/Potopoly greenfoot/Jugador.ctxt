@@ -1,5 +1,12 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Jugador1\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=1
+comment0.params=imagen
+comment0.target=Jugador(int)
+comment0.text=\r\n\ Constructor\ de\ Jugador\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=world
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=
+comment3.target=void\ moveOnce()
+comment3.text=\r\n\ Avanza\ al\ jugador\ en\ una\ casilla\r\n
+numComments=4

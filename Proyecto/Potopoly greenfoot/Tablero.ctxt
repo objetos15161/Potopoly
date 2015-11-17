@@ -1,5 +1,22 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Tablero()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tablero.\r\n\ \r\n
-numComments=1
+comment0.text=\r\n\ Constructor\ para\ la\ clase\ Tablero.\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ iniCasillas()
+comment2.text=\r\n\ Asigna\ las\ coordenadas\ de\ cada\ casilla\r\n
+comment3.params=
+comment3.target=void\ borraVentana()
+comment3.text=\r\n\ Borra\ la\ ventana\ de\ seleccion\r\n
+comment4.params=
+comment4.target=void\ colocaJugadores()
+comment4.text=\r\n\ Coloca\ los\ jugadores\ activos\ en\ sus\ respectivos\ lugares\r\n
+comment5.params=cas
+comment5.target=int\ dameX(int)
+comment5.text=\r\n\ Regresa\ la\ coordenada\ X\ de\ la\ casilla\r\n
+comment6.params=cas
+comment6.target=int\ dameY(int)
+comment6.text=\r\n\ Regresa\ la\ coordenada\ Y\ de\ la\ casilla\r\n
+numComments=7
