@@ -8,12 +8,21 @@ import greenfoot.*;
  */
 public class Dado extends Actor
 {
-    /**
-     * Act - do whatever the Dados wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    public void tomaValor(int valor)
     {
-        // Add your action code here.
-    }    
+        if(valor == 0)
+            setImage("Dado0.png");
+        if(valor == 1)
+            setImage("Dado1.png");
+        if(valor == 2)
+            setImage("Dado2.png");
+        if(valor == 3)
+            setImage("Dado3.png");
+        if(valor == 4)
+            setImage("Dado4.png");
+        if(valor == 5)
+            setImage("Dado5.png");
+        if(valor == 6)
+            setImage("Dado6.png");    
+    }
 }

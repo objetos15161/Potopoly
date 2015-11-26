@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=c\ p\ cx\ cy
+comment0.target=Casilla(int,\ int,\ int,\ int)
+comment1.params=
+comment1.target=int\ dameX()
+comment2.params=
+comment2.target=int\ dameY()
+comment3.params=
+comment3.target=int\ dameCosto()
+comment4.params=
+comment4.target=int\ damePuntos()
+comment5.params=
+comment5.target=Jugador\ dameDuenio()
+comment6.params=D
+comment6.target=void\ tomaDuenio(Jugador)
+numComments=7
