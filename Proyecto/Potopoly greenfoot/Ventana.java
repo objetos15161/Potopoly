@@ -29,4 +29,16 @@ public class Ventana extends Actor
         
         setImage(imagen);
     }
+    
+    public Ventana(int num)
+    {
+        if(num == 1) {
+            GreenfootImage imagen = new GreenfootImage("ayuda.png");
+            setImage(imagen);
+        }
+        else {
+            GreenfootImage imagen = new GreenfootImage("winner.png");
+            setImage(imagen);
+        }
+    }
 }
