@@ -21,7 +21,7 @@ public class Carta extends Actor
     /**
      * Este metodo cambia la imagen de la carta
      * 
-     * @num Numero id de la carta
+     * @param num Numero id de la carta
      * 
      */
     public void tomaImagen(int num)

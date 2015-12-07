@@ -1,17 +1,13 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Torre here.
+ * Esta clase representa las torres de los jugadores donde depositan sus cromos
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Potopoly team 
+ * @version 06-Dic-15
  */
 public class Torre extends Actor
 {
-    /**
-     * Act - do whatever the Torre wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         // Add your action code here.

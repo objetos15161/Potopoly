@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=c\ p\ t\ cx\ cy
 comment0.target=Casilla(int,\ int,\ int,\ int,\ int)
-comment0.text=\r\n\ Constructor\ de\ la\ clase\ Casilla\r\n\ \r\n\ @c\ Costo\ de\ la\ casilla\r\n\ @p\ Puntos\ que\ otorga\ la\ casilla\r\n\ @cx\ Coordenada\ en\ X\ de\ la\ casilla\r\n\ @t\ Tipo\ de\ cromo\r\n\ @cy\ Coordenada\ en\ Y\ de\ la\ casilla\r\n\ \r\n
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Casilla\r\n\ \r\n\ @param\ c\ Costo\ de\ la\ casilla\r\n\ @param\ p\ Puntos\ que\ otorga\ la\ casilla\r\n\ @param\ cx\ Coordenada\ en\ X\ de\ la\ casilla\r\n\ @param\ t\ Tipo\ de\ cromo\r\n\ @param\ cy\ Coordenada\ en\ Y\ de\ la\ casilla\r\n\ \r\n
 comment1.params=
 comment1.target=int\ dameX()
 comment1.text=\r\n\ Regresa\ el\ valor\ de\ la\ coordenada\ en\ X\ de\ la\ casilla\r\n\ \r\n\ @return\ El\ valor\ de\ la\ coordenada\r\n\ \r\n
@@ -19,7 +19,7 @@ comment5.target=Jugador\ dameDuenio()
 comment5.text=\r\n\ Regresa\ el\ jugador\ due\u00F1o\ de\ la\ casilla\r\n\ \r\n\ @return\ El\ jugador\r\n\ \r\n
 comment6.params=D
 comment6.target=void\ tomaDuenio(Jugador)
-comment6.text=\r\n\ Asigna\ un\ due\u00F1o\ a\ la\ casilla\r\n\ \r\n\ @D\ Es\ el\ jugador\ que\ poseera\ la\ casilla\r\n\ \r\n
+comment6.text=\r\n\ Asigna\ un\ due\u00F1o\ a\ la\ casilla\r\n\ \r\n\ @param\ D\ Es\ el\ jugador\ que\ poseera\ la\ casilla\r\n\ \r\n
 comment7.params=
 comment7.target=int\ dameTipo()
 comment7.text=\r\n\ Regresa\ el\ tipo\ de\ cromo\r\n\ \r\n\ @return\ El\ tipo\r\n\ \r\n

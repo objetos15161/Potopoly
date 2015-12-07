@@ -1,17 +1,14 @@
 import greenfoot.*;
 
 /**
- * Write a description of class TiraD here.
+ * Texto de "Tirar dados"
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Potopoly team 
+ * @version 06-Dic-15
  */
 public class TiraD extends Actor
 {
-    /**
-     * Act - do whatever the TiraD wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     public void act() 
     {
         // Add your action code here.

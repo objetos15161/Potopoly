@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.params=valor
 comment0.target=void\ tomaValor(int)
+comment0.text=\r\n\ Cambia\ la\ imagen\ del\ dado\r\n\ \r\n\ @param\ valor\ El\ valor\ del\ dado\r\n\ \r\n
 numComments=1

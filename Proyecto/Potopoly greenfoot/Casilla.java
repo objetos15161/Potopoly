@@ -22,11 +22,11 @@ public class Casilla
     /**
      * Constructor de la clase Casilla
      * 
-     * @c Costo de la casilla
-     * @p Puntos que otorga la casilla
-     * @cx Coordenada en X de la casilla
-     * @t Tipo de cromo
-     * @cy Coordenada en Y de la casilla
+     * @param c Costo de la casilla
+     * @param p Puntos que otorga la casilla
+     * @param cx Coordenada en X de la casilla
+     * @param t Tipo de cromo
+     * @param cy Coordenada en Y de la casilla
      * 
      */
     public Casilla(int c, int p, int t, int cx, int cy)
@@ -97,7 +97,7 @@ public class Casilla
     /**
      * Asigna un dueño a la casilla
      * 
-     * @D Es el jugador que poseera la casilla
+     * @param D Es el jugador que poseera la casilla
      * 
      */
     public void tomaDuenio(Jugador D)

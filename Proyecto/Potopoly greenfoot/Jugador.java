@@ -2,30 +2,30 @@ import greenfoot.*;
 import java.lang.Math;
 
 /**
- * Write a description of class Jugador1 here.
+ * Clase para crear a los jugadores
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Potopoly team 
+ * @version 26-Nov-15
  */
 public class Jugador extends Actor
 {
-    private int saltoX;
-    private int saltoY;    
-    private int casillaAct;
-    private int numCromos;
-    private int dinero;
-    private boolean enCarcel;
-    private boolean tieneCarta;
-    private Torre torre;
-    Tablero thisTablero;
+    private int saltoX;  /** Cambio de posicion en X **/
+    private int saltoY;  /** Cambio de posicion en X **/
+    private int casillaAct;  /** Numero de casilla en la que se encuentra el jugador **/
+    private int numCromos;  /** Numero de cromos que posee el jugador **/
+    private int dinero;  /** Cantidad de dinero que tiene el jugador **/
+    private boolean enCarcel;  /** Bandera que indica si el jugador se encuentra encarcelado **/
+    private boolean tieneCarta; /** Bandera que indica si el jugador tiene una carta para salir de la carcel **/
+    private Torre torre;  /** La torre del jugador **/
+    Tablero thisTablero;  /** El tablero de juego **/
     
-    Cromo[] cromos;
+    Cromo[] cromos;  /** Los cromos que posee el jugador **/
     
     /**
      * Constructor de Jugador
      * 
-     * @imagen Selecciona la imagen del jugador
-     * @t Torre del jugador
+     * @param imagen Selecciona la imagen del jugador
+     * @param t Torre del jugador
      * 
      */
     public Jugador(int imagen, Torre t)
@@ -121,7 +121,7 @@ public class Jugador extends Actor
     /**
      * Asigna un valor a la casilla actual
      * 
-     * @cas El valor de casilla a tomar
+     * @param cas El valor de casilla a tomar
      * 
      */
     public void tomaCasilla(int cas)
@@ -132,7 +132,7 @@ public class Jugador extends Actor
     /**
      * Aumenta (o disminuye) el dinero del jugador
      * 
-     * @cantidad La cantidad a incrementar o decrementar
+     * @param cantidad La cantidad a incrementar o decrementar
      * 
      */
     public void deltaDinero(int cantidad)
@@ -143,7 +143,7 @@ public class Jugador extends Actor
     /**
      * Asigna un valor booleano al estado tieneCarta
      * 
-     * @valor El valor logico que tomara
+     * @param valor El valor logico que tomara
      * 
      */
     public void tomaCarta(boolean valor)
@@ -154,7 +154,7 @@ public class Jugador extends Actor
     /**
      * Asigna una cantidad como el monto de dinero del jugador
      * 
-     * @n La cantidad de dinero
+     * @param n La cantidad de dinero
      * 
      */
     public void tomaDinero(int n)
@@ -165,8 +165,8 @@ public class Jugador extends Actor
     /**
      * Simula haber pagado una cantidad de dinero a otro jugador
      * 
-     * @jug Jugador al que se le pagara
-     * @cantidad La cantidad a pagar
+     * @param jug Jugador al que se le pagara
+     * @param cantidad La cantidad a pagar
      * 
      */
     public void paga(Jugador jug, int cantidad)
@@ -178,8 +178,8 @@ public class Jugador extends Actor
     /**
      * Simula el cobro de una cantidad a otro jugador
      * 
-     * @jug Jugador al que se le cobrara
-     * @cantidad La cantidad a ser cobrada
+     * @param jug Jugador al que se le cobrara
+     * @param cantidad La cantidad a ser cobrada
      * 
      */
     public void cobra(Jugador jug, int cantidad)
@@ -210,36 +210,77 @@ public class Jugador extends Actor
         return torre;
     }
     
+    /**
+     * Regresa un cromo del jugador
+     * 
+     * @param pos El numero de cromo solicitado
+     * @return El cromo en si
+     * 
+     */
     public Cromo dameCromo(int pos)
     {
         return cromos[pos];
     }
     
+    /**
+     * Aumenta la cantidad de cromos que posee el jugador en una cierta cantidad
+     * 
+     * @param cant La cantidad de cromos a añadir
+     * 
+     */
     public void tomaCromos(int cant)
     {
         numCromos += cant;
     }
     
+    /**
+     * Da el cambio en X
+     * 
+     * @return El cambio en X
+     */
     public int dameSX()
     {
         return saltoX;
     }
     
+    /**
+     * Da el cambio en Y
+     * 
+     * @return El cambio en Y
+     */
     public int dameSY()
     {
         return saltoY;
     }
     
+    /**
+     * Asigna un valor a la bandera enCarcel
+     * 
+     * @param n El nuevo valor de la bandera
+     * 
+     */
     public void cambiaCarcel(boolean n)
     {
         enCarcel = n;
     }
     
+    /**
+     * Da el valor de la bandera enCarcel
+     * 
+     * @return El valor de la bandera enCarcel
+     * 
+     */
     public boolean daCarcel()
     {
         return enCarcel;
     }
     
+    /**
+     * Da el valor de la bandera tieneCarta
+     * 
+     * @return El valor de la bandera tieneCarta
+     * 
+     */
     public boolean dameCarta()
     {
         return tieneCarta;

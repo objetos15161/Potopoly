@@ -8,6 +8,12 @@ import greenfoot.*;
  */
 public class Cromo extends Actor
 {
+    /**
+     * Contstructor de la clase Cromo
+     * 
+     * @param tipo El tipo de imagen que llevara el cromo
+     * 
+     */
     public Cromo(int tipo) 
     {
         GreenfootImage imagen;

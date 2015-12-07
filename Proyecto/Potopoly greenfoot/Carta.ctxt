@@ -5,5 +5,5 @@ comment1.params=
 comment1.target=void\ act()
 comment2.params=num
 comment2.target=void\ tomaImagen(int)
-comment2.text=\r\n\ Este\ metodo\ cambia\ la\ imagen\ de\ la\ carta\r\n\ \r\n\ @num\ Numero\ id\ de\ la\ carta\r\n\ \r\n
+comment2.text=\r\n\ Este\ metodo\ cambia\ la\ imagen\ de\ la\ carta\r\n\ \r\n\ @param\ num\ Numero\ id\ de\ la\ carta\r\n\ \r\n
 numComments=3

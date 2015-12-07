@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.params=anchura\ altura\ texto
 comment0.target=Boton(int,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Boton\r\n\ \r\n\ @param\ anchura\ El\ ancho\ del\ boton\ en\ pixeles\r\n\ @param\ altura\ La\ altura\ del\ boton\ en\ pixeles\r\n\ @param\ texto\ El\ texto\ a\ ser\ mostrado\ en\ el\ boton\r\n\ \r\n
 numComments=1

@@ -1,10 +1,8 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Cadena here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Potopoly team 
+ * @version 26-Nov-15
  */
 public class Cadena extends Actor
 {

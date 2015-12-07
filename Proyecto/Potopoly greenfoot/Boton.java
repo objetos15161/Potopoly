@@ -10,6 +10,14 @@ import java.awt.Font;
  */
 public class Boton extends Actor
 {
+    /**
+     * Constructor de la clase Boton
+     * 
+     * @param anchura El ancho del boton en pixeles
+     * @param altura La altura del boton en pixeles
+     * @param texto El texto a ser mostrado en el boton
+     * 
+     */
     public Boton(int anchura, int altura, java.lang.String texto)
     {
         GreenfootImage imagen = new GreenfootImage(anchura,altura);

@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class Tablero extends World
 {
-    private static int TEMPO;
+    private static int TEMPO; /** Velocidad a la que se mueven los jugadores **/
     
     private int numJug; /** Indica el numero de jugadores **/
     private Casilla[] casilla; /** Casillas del tablero **/
@@ -16,23 +16,29 @@ public class Tablero extends World
     
     private int estado; /** Indica el estado del juego (inicio, turno de algun jugador o fin del juego) **/
     private boolean tiroDado; /** Indica si se han tirado los dados **/
-    private boolean finDelJuego;
+    private boolean finDelJuego; /** Indicador del final del juego **/
     
     private Jugador j1, j2, j3, j4; /** Jugadores **/
-    private Jugador ganador;
+    private Jugador ganador;    /** Ganador de la partida **/
     private Counter c1, c2, c3, c4; /** Contadores de dinero **/
     private Torre t1, t2, t3, t4;  /** Torres **/
     private Dado d1,d2; /** Dados **/
     private TiraD aux1; /** Texto tirar dados **/
     private Carta carta; /** Carta **/
     
-    private Ventana v;
+    /**
+     * Objetos de la pantalla de inicio
+     */
+    private Ventana v, sel;
     private Ventana ayuda;
     private Cadena cDinero;
     private Boton b2;
     private Boton b3;
     private Boton b4;
     
+    /**
+     * Sonidos del juego
+     */
     private GreenfootSound fondo;
     private GreenfootSound dados;
     private GreenfootSound pasos;
@@ -51,6 +57,7 @@ public class Tablero extends World
         estado = 0;
         tiroDado = false;
         v = new Ventana();
+        sel = new Ventana(2);
         ayuda = new Ventana(1);
         cDinero = new Cadena();
         finDelJuego = false;
@@ -97,7 +104,8 @@ public class Tablero extends World
            }
        }
        else if(estado == 1) {   /** Turno del jugador 1 **/
-          if(j1.daCarcel()) {
+          sel.setLocation(680, 100);
+           if(j1.daCarcel()) {
             j1.cambiaCarcel(false);
             estado++;
           }
@@ -126,7 +134,8 @@ public class Tablero extends World
           }          
        }
        else if(estado == 2) {   /** Turno del jugador 2 **/
-          if(j2.daCarcel()) {
+          sel.setLocation(680, 141);
+           if(j2.daCarcel()) {
             j2.cambiaCarcel(false);
             estado = (estado == numJug ? 1 : (estado + 1));
           }
@@ -155,6 +164,7 @@ public class Tablero extends World
           }          
        }
        else if(estado == 3) {   /** Turno del jugador 3 **/
+          sel.setLocation(680, 182);
           if(j3.daCarcel()) {
             j3.cambiaCarcel(false);
             estado = (estado == numJug ? 1 : (estado + 1));
@@ -182,7 +192,8 @@ public class Tablero extends World
           }         
        }
        else {   /** Turno del jugador 4 **/
-          if(j4.daCarcel()) {
+          sel.setLocation(680, 223);
+           if(j4.daCarcel()) {
             j4.cambiaCarcel(false);
             estado = 1;
           }
@@ -289,6 +300,7 @@ public class Tablero extends World
         addObject(t2,244,365);
         addObject(aux1,708,449);
         addObject(cDinero,700,35);
+        addObject(sel,680,100);
         addObject(c1,700,100);
         addObject(c2,700,141);
         
@@ -357,8 +369,8 @@ public class Tablero extends World
     /**
      * Este metodo mueve a un jugador un determinado numero de casillas
      * 
-     * @J El jugador que se quiere mover
-     * @numPasos El numero de casillas a avanzar
+     * @param J El jugador que se quiere mover
+     * @param numPasos El numero de casillas a avanzar
      * 
      */
     public void moverJugador(Jugador J, int numPasos)
@@ -373,9 +385,9 @@ public class Tablero extends World
     /**
      * Este metodo realiza la accion correspondiente de la casilla en la que cae el jugador
      * 
-     * @J El jugador que quiere checar la casilla
-     * @ant El jugador anterior a J
-     * @sig El jugador sucesor de J
+     * @param J El jugador que quiere checar la casilla
+     * @param ant El jugador anterior a J
+     * @param sig El jugador sucesor de J
      * 
      */
     public void checaCasilla(Jugador J, Jugador ant, Jugador sig)
@@ -395,6 +407,16 @@ public class Tablero extends World
         else if(cas == 4 || cas == 38) {
             J.deltaDinero(J.dameDinero() >= casilla[cas].dameCosto() * -1 ? casilla[cas].dameCosto() : J.dameDinero() * -1);
         }
+        else if(cas == 30) {
+            J.tomaCasilla(10);
+            J.setLocation(casilla[10].dameX()+J.dameSX(),casilla[10].dameY()+J.dameSY());
+            if(J.dameCarta() == false) {
+                J.cambiaCarcel(true);
+            }
+            else {
+                J.tomaCarta(false);
+            }
+        }
         else if(cas != 10 && cas != 20) {
             dno = casilla[cas].dameDuenio();
             if(dno != null && dno != J) {
@@ -409,9 +431,9 @@ public class Tablero extends World
     /**
      * Este metodo elige una carta comunitaria al azar y realiza su accion ademas de mostrar la carta correspondiente
      * 
-     * @J El jugador que toma la carta
-     * @ant El jugador anterior a J
-     * @sig El jugador sucesor de J
+     * @param J El jugador que toma la carta
+     * @param ant El jugador anterior a J
+     * @param sig El jugador sucesor de J
      * 
      */
     public void tomaComunitaria(Jugador act, Jugador ant, Jugador sig)
@@ -469,7 +491,7 @@ public class Tablero extends World
     /**
      * Este metodo elige una carta de oportunidad al azar y realiza su accion ademas de mostrar la carta correspondiente
      * 
-     * @J El jugador que toma la carta
+     * @param J El jugador que toma la carta
      * 
      */
     public void tomaOportunidad(Jugador J)
@@ -545,6 +567,9 @@ public class Tablero extends World
     /**
      * Este metodo compra la casilla, le asigna su nuevo dueño
      * y coloca el cromo en la posicion correspondiente
+     * 
+     * @param J El jugador a comprar la casilla
+     * 
      */
     public void comprarCasilla(Jugador J)
     {
@@ -562,6 +587,9 @@ public class Tablero extends World
     }
     
     /**
+     * Añade el cromo correspondiente a la torre del jugador
+     * 
+     * @param J El jugador a recibir un cromo
      * 
      */
     public void añadeCromo(Jugador J)
@@ -575,6 +603,9 @@ public class Tablero extends World
         J.tomaCromos(1);
     }
     
+    /**
+     * Actualiza los contadores con los valores respectivos de cada jugador
+     */
     public void actConts()
     {
         c1.setValue(j1.dameDinero());
@@ -587,6 +618,9 @@ public class Tablero extends World
         }
     }
     
+    /**
+     * Muestra la pantalla de fin del juego junto con el jugador ganador y detiene el juego
+     */
     public void gameOver()
     {
         Ventana g = new Ventana(2);

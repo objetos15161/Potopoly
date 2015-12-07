@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.params=tipo
 comment0.target=Cromo(int)
+comment0.text=\r\n\ Contstructor\ de\ la\ clase\ Cromo\r\n\ \r\n\ @param\ tipo\ El\ tipo\ de\ imagen\ que\ llevara\ el\ cromo\r\n\ \r\n
 comment1.params=
 comment1.target=void\ act()
 numComments=2

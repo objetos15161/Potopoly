@@ -3,10 +3,10 @@ import java.awt.Font;
 import java.awt.Color;
 
 /**
- * Write a description of class Ventana here.
+ * Clase usada para crear una ventana
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Potopoly team 
+ * @version 26-Nov-15
  */
 public class Ventana extends Actor
 {
@@ -30,13 +30,22 @@ public class Ventana extends Actor
         setImage(imagen);
     }
     
+    /**
+     * Constructor alternativo de la ventana
+     * 
+     * @param num comparador
+     */
     public Ventana(int num)
     {
         if(num == 1) {
             GreenfootImage imagen = new GreenfootImage("ayuda.png");
             setImage(imagen);
         }
-        else {
+        else if(num == 2) {
+            GreenfootImage imagen = new GreenfootImage("selector.png");
+            setImage(imagen);
+        }
+        else{
             GreenfootImage imagen = new GreenfootImage("winner.png");
             setImage(imagen);
         }
