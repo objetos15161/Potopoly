@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=Ventana()
-comment0.text=\r\n\ Constructor\ de\ la\ clase\ Ventana\r\n
-comment1.params=num
-comment1.target=Ventana(int)
-comment1.text=\r\n\ Constructor\ alternativo\ de\ la\ ventana\r\n\ \r\n\ @param\ num\ comparador\r\n
-numComments=2

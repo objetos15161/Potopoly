@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Ventana()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Ventana\r\n
+comment1.params=num
+comment1.target=Ventana(int)
+comment1.text=\r\n\ Constructor\ alternativo\ de\ la\ ventana\r\n\ \r\n\ @param\ num\ comparador\r\n
+comment2.params=c
+comment2.target=Ventana(char)
+comment2.text=\r\n\ Ventana\ de\ gameover\r\n
+comment3.params=est
+comment3.target=void\ muevete(int)
+comment3.text=\r\n\ Mueve\ el\ selector\ de\ lugar\r\n
+numComments=4
